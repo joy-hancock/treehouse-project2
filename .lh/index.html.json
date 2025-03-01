@@ -1,0 +1,26 @@
+{
+    "sourceFile": "index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1740860686893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740860794348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n \t\t\tname=\"viewport\"\n \t\t\tcontent=\"width=device-width, initial-scale=1.0\" />\n \t\t<title>Document</title>\n \t</head>\n-\t<body></body>\n+\t<body><div class=\"container\"></div></body>\n </html>\n"
+                },
+                {
+                    "date": 1740860814582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n \t\t\tcontent=\"width=device-width, initial-scale=1.0\" />\n \t\t<title>Document</title>\n \t</head>\n \t<body>\n-\t\t<div class=\"container\"></div>\n+\t\t<div class=\"container\"><header></header></div>\n \t</body>\n </html>\n"
+                }
+            ],
+            "date": 1740860686893,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Document</title>\n</head>\n<body>\n  \n</body>\n</html>"
+        }
+    ]
+}
