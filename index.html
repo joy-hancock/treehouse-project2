@@ -5,147 +5,180 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="/css/reset.css" />
+		<link
+			rel="stylesheet"
+			href="/css/styles.css" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet" />
+		<title>Mobile Friendly Responsive Page</title>
 	</head>
 	<body>
-		<header>
-			<h1 class="name">Student Name</h1>
-			<nav class="top-nav">
-				<ul>
-					<li id="home"><a href="#">Home</a></li>
-					<li id="portfolio"><a href="#">Portfolio</a></li>
-					<li id="portfolio"><a href="#">Skills</a></li>
-					<li id="contact"><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
-		<div class="banner">
-			<p>
-				Hi! I'm a developer who loves responsive design and css. I recently
-				finished learning front-end web development at Treehouse and am excited
-				to put my skills to use!
-			</p>
-			<img
-				class="profile-pic"
-				src="images/responsive-layout-profile.png"
-				alt="Profile picture of front-end developer" />
-		</div>
+		<div class="wrapper">
+			<div class="container top">
+				<header>
+					<h1
+						id="name"
+						class="name">
+						Joy Hancock
+					</h1>
+					<nav class="top-nav">
+						<ul class="flow-sm">
+							<li id="home"><a href="#">Home</a></li>
+							<li id="portfolio"><a href="#">Portfolio</a></li>
+							<li id="skills"><a href="#">Skills</a></li>
+							<li id="contact"><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</header>
+				<div class="banner">
+					<img
+						class="profile-pic"
+						src="images/responsive-layout-profile.png"
+						alt="Profile picture of front-end developer" />
+					<p class="text-light">
+						Hi! I'm a front-end developer who loves responsive design and css. I
+						recently finished learning front-end web development at Treehouse
+						and am excited to put my skills to use!
+					</p>
+				</div>
+			</div>
 
-		<section class="portfolio">
-			<h2>Portfolio</h2>
-			<section class="cards">
-				<div class="card">
-					<h3>Marketing Page</h3>
-					<p>
-						This project shows the front page of a marketing website meant for a
-						specific business I'm interested in.
-					</p>
-					<img
-						class="portfolio-img"
-						src="images/portfolio-1.png"
-						alt="Front page of marketing website." />
-				</div>
-				<div class="card">
-					<h3>Marketing Page</h3>
-					<p>
-						This project shows the front page of a marketing website meant for a
-						specific business I'm interested in.
-					</p>
-					<img
-						class="portfolio-img"
-						src="images/portfolio-1.png"
-						alt="Front page of marketing website." />
-				</div>
-				<div class="card">
-					<h3>Search Page</h3>
-					<p>
-						This project searches through a specific database to find
-						information that the user is trying to look up.
-					</p>
-					<img
-						class="portfolio-img"
-						src="images/portfolio-2.png"
-						alt="Illustration of search page." />
-				</div>
-				<div class="card">
-					<h3>Travel App</h3>
-					<p>
-						This project compares travel times based on different transportation
-						methods and tells you the best one.
-					</p>
-					<img
-						class="portfolio-img"
-						src="images/portfolio-3.png"
-						alt="Illustration of web-based travel app." />
-				</div>
-				<div class="card">
-					<h3>Map of Favorite Spots</h3>
-					<p>
-						This project uses mapping apis to plot points for my favorite spots
-						in the city for a do-it-yourself walking tour.
-					</p>
-					<img
-						class="portfolio-img"
-						src="images/portfolio-4.png"
-						alt="Illustration of web-based application similar to Google maps." />
-				</div>
-				<div class="card">
-					<h3>Photo Gallery</h3>
-					<p>
-						This project shows pictures from a recent trip to the viewer and
-						allows them to easily navigate through photos.
-					</p>
-					<img
-						class="portfolio-img"
-						src="images/portfolio-5.png"
-						alt="Illustration of web-based photo gallery app." />
-				</div>
-				<div class="card">
-					<h3>Calculator</h3>
-					<p>
-						Someone can enter in the numbers they want, and press the big blue
-						button and get the result.
-					</p>
-					<img
-						class="portfolio-img"
-						src="images/portfolio-6.png"
-						alt="Illustration of web-based calculator app." />
-				</div>
+			<section class="container portfolio">
+				<h2>Portfolio</h2>
+				<section class="cards flow-lg">
+					<article class="card flow-lg">
+						<img
+							class="portfolio-img"
+							src="images/portfolio-1.png"
+							alt="Front page of marketing website." />
+						<div class="flow-md">
+							<h3>Marketing Page</h3>
+							<p>
+								This project shows the front page of a marketing website meant
+								for a specific business I'm interested in.
+							</p>
+						</div>
+					</article>
+					<article class="card flow-lg">
+						<img
+							class="portfolio-img"
+							src="images/portfolio-2.png"
+							alt="Illustration of search page." />
+						<div class="flow-md">
+							<h3>Search Page</h3>
+							<p>
+								This project searches through a specific database to find
+								information that the user is trying to look up.
+							</p>
+						</div>
+					</article>
+					<article class="card flow-lg">
+						<img
+							class="portfolio-img"
+							src="images/portfolio-3.png"
+							alt="Illustration of web-based travel app." />
+						<div class="flow-md">
+							<h3>Travel App</h3>
+							<p>
+								This project compares travel times based on different
+								transportation methods and tells you the best one.
+							</p>
+						</div>
+					</article>
+					<article class="card flow-lg">
+						<img
+							class="portfolio-img"
+							src="images/portfolio-4.png"
+							alt="Illustration of web-based application similar to Google maps." />
+						<div class="flow-md">
+							<h3>Map of Favorite Spots</h3>
+							<p>
+								This project uses mapping apis to plot points for my favorite
+								spots in the city for a do-it-yourself walking tour.
+							</p>
+						</div>
+					</article>
+					<article class="card flow-lg">
+						<img
+							class="portfolio-img"
+							src="images/portfolio-5.png"
+							alt="Illustration of web-based photo gallery app." />
+						<div class="flow-md">
+							<h3>Photo Gallery</h3>
+							<p>
+								This project shows pictures from a recent trip to the viewer and
+								allows them to easily navigate through photos.
+							</p>
+						</div>
+					</article>
+					<article class="card flow-lg">
+						<img
+							class="portfolio-img"
+							src="images/portfolio-6.png"
+							alt="Illustration of web-based calculator app." />
+						<div class="flow-md">
+							<h3>Calculator</h3>
+							<p>
+								Someone can enter in the numbers they want, and press the big
+								blue button and get the result.
+							</p>
+						</div>
+					</article>
+				</section>
 			</section>
-		</section>
-		<section class="contact">
-			<h2>Contact</h2>
-			<p>
-				If you're interested in chatting or want more information about what
-				I've been working on, I'd love to hear from you!
-			</p>
-			<p>
-				Phone
-				<a
-					class="contact-link"
-					href="tel:+1(111)555-1234"
-					>1 (111) 555-1234</a
-				>
-			</p>
-			<p>
-				Email
-				<a
-					class="contact-link"
-					href="mailto:email@yoursite.com"
-					>email@yoursite.com</a
-				>
-			</p>
-		</section>
-		<footer>
-			<p>Student name</p>
-			<nav>
-				<ul>
-					<li><a href="#home">Home</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#skills">Skills</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
-		</footer>
+
+			<div class="container">
+				<section class="contact">
+					<h2>Contact</h2>
+					<p class="text-light">
+						If you're interested in chatting or want more information about what
+						I've been working on, I'd love to hear from you!
+					</p>
+					<p>
+						Phone
+						<a
+							class="contact-link"
+							href="tel:+1(111)555-1234"
+							>+1 (111) 555-1234</a
+						>
+					</p>
+					<p>
+						Email
+						<a
+							class="contact-link"
+							href="mailto:joyhancock1@gmail.com"
+							>joyhancock1@gmail.com</a
+						>
+					</p>
+				</section>
+				<footer>
+					<p>Joy Hancock</p>
+					<nav class="bottom-nav">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#skills">Skills</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+					<a
+						class="back-to-top"
+						href="#name"
+						>Back to Top</a
+					>
+				</footer>
+			</div>
+		</div>
 	</body>
 </html>

@@ -1,0 +1,261 @@
+/* ================================= 
+ Utility Classes
+==================================== */
+[class^='flow'] > * {
+	/* top and bottom margins in horizontal-tb writing mode */
+	margin-block: 0;
+}
+
+.flow-lg > * + * {
+	margin-block-start: 3rem;
+}
+
+.flow-md > * + * {
+	margin-block-start: 2rem;
+}
+
+.flow-sm > * + * {
+	margin-block-start: 0.5rem;
+}
+
+.text-light {
+	color: #555;
+}
+
+/* ================================= 
+  Base Element Styles
+==================================== */
+body {
+	font-family: 'Nunito', system-ui, sans-serif;
+	color: #2c2c2c;
+	text-align: center;
+	background-color: #fafafa;
+	font-size-adjust: from-font;
+	margin: 0;
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: 70rem;
+}
+h1,
+h2,
+h3 {
+	font-family: 'Roboto', system-ui, sans-serif;
+	letter-spacing: 1px;
+}
+
+h1 {
+	font-size: 2.25rem;
+}
+
+h2 {
+	font-size: 1.7rem;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: 1.75rem;
+	font-weight: 400;
+}
+
+p {
+	font-size: 1.15rem;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+}
+
+a {
+	text-decoration: none;
+	color: #2c2c2c;
+	font-weight: 600;
+}
+
+a:hover {
+	text-decoration: underline #36acd0 0.15em;
+}
+
+img {
+	margin: 0 auto;
+}
+
+.container {
+	padding-inline: 1.25rem;
+}
+
+.top {
+	padding-block: 2.5rem 3.5rem;
+}
+
+.top-nav {
+	margin-block-start: 2.5rem;
+}
+
+.top-nav ul {
+	display: flex;
+	flex-direction: column;
+}
+
+.top-nav li {
+	background-color: #fff;
+	padding: 1rem;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+}
+
+.banner {
+	margin-block-start: 3rem;
+}
+
+.profile-pic {
+	width: 80%;
+}
+
+.banner p {
+	margin-block-start: 2rem;
+}
+
+.portfolio {
+	background-color: #fff;
+	padding-block: 4.5rem 5.5rem;
+}
+
+.portfolio h2 {
+	margin-block-end: 4.5rem;
+}
+.portfolio-img {
+	transition: transform 0.3s;
+}
+
+.portfolio-img:hover {
+	transform: scale(1.08);
+	cursor: pointer;
+}
+article {
+	padding-inline: 1.25rem;
+}
+
+.contact {
+	padding-block: 6.25rem;
+}
+
+.contact p:first-of-type {
+	margin-block: 3rem 1.75rem;
+}
+
+.contact p:nth-child(4) {
+	margin-block-start: 1rem;
+}
+
+.contact a {
+	margin-inline-start: 0.5rem;
+}
+
+footer * {
+	font-size: 1.25rem;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+}
+footer {
+	padding-block: 2.5rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 1rem;
+	justify-content: space-between;
+	border-top: 1px solid #e7e7e7;
+}
+
+footer a {
+	text-transform: uppercase;
+}
+
+.bottom-nav {
+	display: none;
+}
+
+/* ================================= 
+ Media Queries
+==================================== */
+@media (min-width: 768px) {
+	.container {
+		padding-inline: 2rem;
+	}
+	.top-nav ul {
+		flex-direction: row;
+		justify-content: center;
+	}
+	.top-nav li {
+		background-color: unset;
+		margin-block: 0;
+		font-size: 1.5rem;
+	}
+
+	.banner {
+		display: flex;
+		gap: 1rem;
+		margin-block-start: 4.5rem;
+	}
+
+	.banner p {
+		text-align: start;
+		margin-block-start: 0;
+		font-size: 1.5rem;
+		hyphens: unset;
+		text-wrap: pretty;
+	}
+
+	.profile-pic {
+		order: 1;
+		width: 40%;
+	}
+	.portfolio h2 {
+		margin-block-end: 0.5rem;
+	}
+
+	.cards {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.card {
+		flex-grow: 1;
+		flex-basis: 45%;
+		margin-block-start: 4rem;
+	}
+
+	.bottom-nav {
+		display: block;
+	}
+
+	.bottom-nav ul {
+		display: flex;
+		gap: 2rem;
+		flex-wrap: wrap;
+	}
+
+	.back-to-top {
+		display: none;
+	}
+}
+
+@media (min-width: 1024px) {
+	.wrapper {
+		width: 80vw;
+		max-width: 80rem;
+	}
+
+	.top {
+		padding-inline: 0;
+	}
+
+	.banner {
+		gap: 2rem;
+	}
+
+	.profile-pic {
+		width: 100%;
+	}
+}

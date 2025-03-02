@@ -1,0 +1,34 @@
+{
+    "sourceFile": "css/reset.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1740863043319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740865506592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,75 +1,97 @@\n-\n /* Box sizing rules */\n *,\n *::before,\n *::after {\n-  box-sizing: border-box;\n+\tbox-sizing: border-box;\n }\n \n /* Prevent font size inflation */\n html {\n-  -moz-text-size-adjust: none;\n-  -webkit-text-size-adjust: none;\n-  text-size-adjust: none;\n+\t-moz-text-size-adjust: none;\n+\t-webkit-text-size-adjust: none;\n+\ttext-size-adjust: none;\n }\n \n /* Remove default margin in favour of better control in authored CSS */\n-body, h1, h2, h3, h4, p,\n-figure, blockquote, dl, dd {\n-  margin-block-end: 0;\n+body,\n+h1,\n+h2,\n+h3,\n+h4,\n+p,\n+figure,\n+blockquote,\n+dl,\n+dd {\n+\tmargin-block-end: 0;\n }\n \n /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */\n ul[role='list'],\n ol[role='list'] {\n-  list-style: none;\n+\tlist-style: none;\n }\n \n /* Set core body defaults */\n body {\n-  min-height: 100vh;\n-  line-height: 1.5;\n+\tmin-height: 100vh;\n+\tline-height: 1.5;\n }\n \n /* Set shorter line heights on headings and interactive elements */\n-h1, h2, h3, h4,\n-button, input, label {\n-  line-height: 1.1;\n+h1,\n+h2,\n+h3,\n+h4,\n+button,\n+input,\n+label {\n+\tline-height: 1.1;\n }\n \n /* Balance text wrapping on headings */\n-h1, h2,\n-h3, h4 {\n-  text-wrap: balance;\n+h1,\n+h2,\n+h3,\n+h4 {\n+\ttext-wrap: balance;\n }\n \n /* A elements that don't have a class get default styles */\n a:not([class]) {\n-  text-decoration-skip-ink: auto;\n-  color: currentColor;\n+\ttext-decoration-skip-ink: auto;\n+\tcolor: currentColor;\n }\n \n /* Make images easier to work with */\n img,\n picture {\n-  max-width: 100%;\n-  display: block;\n+\tmax-width: 100%;\n+\tdisplay: block;\n }\n \n /* Inherit fonts for inputs and buttons */\n-input, button,\n-textarea, select {\n-  font-family: inherit;\n-  font-size: inherit;\n+input,\n+button,\n+textarea,\n+select {\n+\tfont-family: inherit;\n+\tfont-size: inherit;\n }\n \n /* Make sure textareas without a rows attribute are not tiny */\n textarea:not([rows]) {\n-  min-height: 10em;\n+\tmin-height: 10em;\n }\n \n /* Anything that has been anchored to should have extra scroll margin */\n :target {\n-  scroll-margin-block: 5ex;\n+\tscroll-margin-block: 5ex;\n }\n \n+/* Baseline for default links */\n+a:not([class]) {\n+\t/* Relatively sized thickness and offset */\n+\ttext-decoration-thickness: max(0.08em, 1px);\n+\ttext-underline-offset: 0.15em;\n+}\n"
+                },
+                {
+                    "date": 1740865540961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,4 +94,12 @@\n \t/* Relatively sized thickness and offset */\n \ttext-decoration-thickness: max(0.08em, 1px);\n \ttext-underline-offset: 0.15em;\n }\n+\n+:focus-visible {\n+  --outline-size: max(2px, 0.15em);\n+\n+  outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid)\n+    var(--outline-color, currentColor);\n+  outline-offset: var(--outline-offset, var(--outline-size));\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740866111303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -95,11 +95,12 @@\n \ttext-decoration-thickness: max(0.08em, 1px);\n \ttext-underline-offset: 0.15em;\n }\n \n+:focus {\n+  outline: none;\n+}\n+\n :focus-visible {\n-\t--outline-size: max(2px, 0.15em);\n-\n-\toutline: var(--outline-width, var(--outline-size)) var(--outline-style, solid)\n-\t\tvar(--outline-color, currentColor);\n-\toutline-offset: var(--outline-offset, var(--outline-size));\n+  outline: 2px solid var(--focus-color, currentColor);\n+  outline-offset: var(--focus-offset, 0.2lh);\n }\n"
+                },
+                {
+                    "date": 1740866141588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,12 +89,10 @@\n \tscroll-margin-block: 5ex;\n }\n \n /* Baseline for default links */\n-a:not([class]) {\n-\t/* Relatively sized thickness and offset */\n-\ttext-decoration-thickness: max(0.08em, 1px);\n-\ttext-underline-offset: 0.15em;\n+a:not([class]):hover {\n+  text-underline-offset: 0.2lh;\n }\n \n :focus {\n \toutline: none;\n"
+                }
+            ],
+            "date": 1740863043319,
+            "name": "Commit-0",
+            "content": "\n/* Box sizing rules */\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\n/* Prevent font size inflation */\nhtml {\n  -moz-text-size-adjust: none;\n  -webkit-text-size-adjust: none;\n  text-size-adjust: none;\n}\n\n/* Remove default margin in favour of better control in authored CSS */\nbody, h1, h2, h3, h4, p,\nfigure, blockquote, dl, dd {\n  margin-block-end: 0;\n}\n\n/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */\nul[role='list'],\nol[role='list'] {\n  list-style: none;\n}\n\n/* Set core body defaults */\nbody {\n  min-height: 100vh;\n  line-height: 1.5;\n}\n\n/* Set shorter line heights on headings and interactive elements */\nh1, h2, h3, h4,\nbutton, input, label {\n  line-height: 1.1;\n}\n\n/* Balance text wrapping on headings */\nh1, h2,\nh3, h4 {\n  text-wrap: balance;\n}\n\n/* A elements that don't have a class get default styles */\na:not([class]) {\n  text-decoration-skip-ink: auto;\n  color: currentColor;\n}\n\n/* Make images easier to work with */\nimg,\npicture {\n  max-width: 100%;\n  display: block;\n}\n\n/* Inherit fonts for inputs and buttons */\ninput, button,\ntextarea, select {\n  font-family: inherit;\n  font-size: inherit;\n}\n\n/* Make sure textareas without a rows attribute are not tiny */\ntextarea:not([rows]) {\n  min-height: 10em;\n}\n\n/* Anything that has been anchored to should have extra scroll margin */\n:target {\n  scroll-margin-block: 5ex;\n}\n\n"
+        }
+    ]
+}
