@@ -66,9 +66,13 @@ p {
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
+a {
 	text-decoration-skip-ink: auto;
 	color: currentColor;
+}
+/* Baseline for default links */
+a:hover {
+	text-underline-offset: 0.1lh;
 }
 
 /* Make images easier to work with */
@@ -78,28 +82,9 @@ picture {
 	display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-	font-family: inherit;
-	font-size: inherit;
-}
-
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-	min-height: 10em;
-}
-
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
 	scroll-margin-block: 5ex;
-}
-
-/* Baseline for default links */
-a:not([class]):hover {
-	text-underline-offset: 0.1lh;
 }
 
 :focus {
@@ -107,8 +92,9 @@ a:not([class]):hover {
 }
 
 :focus-visible {
-	outline: 2px solid var(--focus-color, currentColor);
-	outline-offset: var(--focus-offset, 0.2lh);
+	outline: 2px solid #36acd0;
+
+	background-color: #fdd26d37;
 }
 
 /* Firefox is the only browser that doesn't outline the whole element unless you make it display: inline-block. That in itself causes multiple flow issues so we can detect it, using its own vendor prefix and reduce focus offset
